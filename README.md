@@ -22,3 +22,4 @@ This will showcase all the different components in material.
 5.  Navbar
 6.  Collections & Badges
 7.  Grid Layout
+8.  Cards
