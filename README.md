@@ -1,0 +1,8 @@
+# Material CSS Showcase
+
+Adapted from [Materialize CSS From Scratch With 5 Projects](https://www.safaribooksonline.com/library/view/materialize-css-from/9781789538724/) that has a Material CSS Sandbox.
+Stripped down all the unnecessary stuff and wrap the examples in card where possible.
+This will showcase all the different components in material.
+
+1.  Basic Typography
+2.  Text & Background Colors
