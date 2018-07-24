@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fancy Form & Input</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align" Fancy Form & Input</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+
+            <form>
+                <!-- SWITCH -->
+                <div class="switch">
+                    <label>
+                        Disable
+                        <input type="checkbox" checked>
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                </div>
+
+                <!-- DISABLED SWITCH -->
+                <div class="switch">
+                    <label>
+                        Disable
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                </div>
+
+                <br>
+                <br>
+
+                <!-- FILE INPUT -->
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Upload File</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input type="text" class="file-path">
+                    </div>
+                </div>
+
+                <!-- RANGE SLIDER -->
+                <p class="range-field">
+                    <input type="range" min="0" max="100">
+                </p>
+
+                <!-- DATE PICKER -->
+                <div class="input-field">
+                    <input type="text" id="date" class="datepicker">
+                    <label for="date">Choose a Date</label>
+                </div>
+
+                <!-- TIME PICKER -->
+                <div class="input-field">
+                    <input type="text" id="time" class="timepicker">
+                    <label for="time">Choose a Time</label>
+                </div>
+
+                <!-- CHARACTER COUNTER -->
+                <div class="input-field">
+                    <input id="post" type="text" data-length="10">
+                    <label for="post">Post</label>
+                </div>
+
+                <!-- AUTOCOMPLETE -->
+                <div class="input-field">
+                    <input type="text" id="fruit" class="autocomplete">
+                    <label for="fruit">Type a Fruit</label>
+                </div>
+
+                <br>
+                <br>
+                <div>
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 500px;"></div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // init datepicker
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: 15,
+                closeOnSelect: true
+            })
+
+            $('.timepicker').pickatime({
+                default: 'now',
+                twelverhour: true,
+                donetext: 'ok',
+                cleattext: 'clear',
+                canceltext: 'cancel',
+                autoclose: true
+            })
+            // init autocomplete
+            $('.autocomplete').autocomplete({
+                data: {
+                    "Apple": null,
+                    "Orange": null,
+                    "Banana": null,
+                    "Grapes": null,
+                    "Strawberries": null,
+                    "Pears": null,
+                },
+                limit: 20,
+                minLength: 2
+            })
+        });
+        // init the slect list
+
+    </script>
+</body>
+
+</html>
