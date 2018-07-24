@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Toasts & Tooltip Dialogs</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Toasts & Tooltip Dialogs</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- TOAST BUTTON -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">TOAST BUTTON</div>
+                    <a id="toast1" class="btn">Show Toast</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- ROUNDED TOAST -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">ROUNDED TOAST</div>
+                    <a id="toast2" class="btn">Rounded Toast</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- CALLBACK ON DISMISS -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">CALLBACK ON DISMISS</div>
+                    <a id="toast3" class="btn">Toast With Callback</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- TOOLTIPS -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">TOOLTIPS</div>
+                    <a class="btn tooltipped" data-delay="2000" data-position="bottom" data-tooltip="I'm a tooltip">Bottom Tooltip</a>
+                    <a class="btn tooltipped" data-position="top" data-tooltip="I'm a tooltip">Top Tooltip</a>
+                    <a class="btn tooltipped" data-position="right" data-tooltip="I'm a tooltip">Right Tooltip</a>
+                    <a class="btn tooltipped" data-position="left" data-tooltip="I'm a tooltip">Left Tooltip</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Run toast
+            $('#toast1').click(function () {
+                Materialize.toast('I am toast', 3000);
+            });
+
+            // Run rounded toast
+            $('#toast2').click(function () {
+                Materialize.toast('I am toast', 3000, 'rounded');
+            });
+
+            // toast callback
+            $('#toast3').click(function () {
+                Materialize.toast('I am toast', 3000, 'rounded',
+                    function () {
+                        alert('Toast Dismissed!')
+                    });
+            });
+
+            // create toast
+            Materialize.toast('I am toast', 3000);
+
+            // remove all toast
+            setTimeout(function () {
+                Materialize.Toast.removeAll();
+            }, 2000)
+
+        });
+    </script>
+</body>
+
+</html>
