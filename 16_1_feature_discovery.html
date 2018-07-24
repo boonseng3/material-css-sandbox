@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Feature Discovery</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Feature Discovery</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- FEATURE DISCOVERY -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">FEATURE DISCOVERY</div>
+                    <a class="btn waves-effect waves-light" onClick="$('.tap-target').tapTarget('open')">Open Tap Target</a>
+                    <a class="btn waves-effect waves-light" onClick="$('.tap-target').tapTarget('close')">Close Tap Target</a>
+
+                    <div class="fixed-action-btn">
+                        <a id="menu" class="btn btn-floating btn-large cyan" onClick="$('.tap-target').tapTarget('open')">
+                            <i class="material-icons">menu</i>
+                        </a>
+                    </div>
+
+                    <div class="tap-target-wrapper">
+                        <div class="tap-target cyan" data-activates="menu">
+                            <div class="tap-target-content white-text">
+                                <h5>Hello World</h5>
+                                <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores.
+                                    Impedit cum asperiores a aspernatur ullam esse id!</p>
+                            </div>
+                        </div>
+                        <div class="tap-target-wave">
+                            <a class="btn btn-floating btn-large red tap-target-origin">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.collapsible').collapsible({
+                onOpen: function () {
+                    alert('Open');
+                },
+                onClose: function () {
+                    alert('Close');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

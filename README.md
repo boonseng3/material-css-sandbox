@@ -30,3 +30,4 @@ This will showcase all the different components in material.
 13. Preloaders
 14. Carousel & Content Slider
 15. Collapsible
+16. Feature Discovery
