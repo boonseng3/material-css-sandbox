@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Collapsible</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Collapsible</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- COLLAPSIBLE -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">COLLAPSIBLE</div>
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">group_work</i>First
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the first area</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header active">
+                                <i class="material-icons">help</i>Second
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the Second area</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">info</i>third
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the third area</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- EXPANDABLE COLLAPSIBLE -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">EXPANDABLE COLLAPSIBLE</div>
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">group_work</i>First
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the first area</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header active">
+                                <i class="material-icons">help</i>Second
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the Second area</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">info</i>third
+                            </div>
+                            <div class="collapsible-body">
+                                <span>This is the third area</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.collapsible').collapsible({
+                onOpen: function () {
+                    alert('Open');
+                },
+                onClose: function () {
+                    alert('Close');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
