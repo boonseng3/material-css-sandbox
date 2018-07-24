@@ -32,3 +32,4 @@ This will showcase all the different components in material.
 15. Collapsible
 16. Feature Discovery
 17. Toasts & Tooltips
+18. Materialbox & Slider

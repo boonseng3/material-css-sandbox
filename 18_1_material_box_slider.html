@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Material Box & Slider</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Material Box & Slider</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- Material box -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title"> Material box</div>
+                    <img src="img/img1.jpg" class="materialboxed" width="20%">
+
+                </div>
+            </div>
+            <!-- Material box with caption -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title"> Material box with caption</div>
+                    <img src="img/img2.jpg" class="materialboxed" width="20%" data-caption="This is my photo">
+
+                </div>
+            </div>
+
+            <!-- SLIDER -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">SLIDER</div>
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="img/img3.jpg">
+                                <!-- CENTER ALIGN CAPTION -->
+                                <div class="caption center-align">
+                                    <h3 class="black-text">Center Caption</h3>
+                                    <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/img4.jpg">
+                                <!-- LEFT ALIGN CAPTION -->
+                                <div class="caption left-align">
+                                    <h3>Left Aligned Caption</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/img5.jpg">
+                                <!-- RIGHT ALIGN CAPTION -->
+                                <div class="caption right-align">
+                                    <h3>Right Aligned Caption</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({
+                indicators: true,
+                height: 400,
+                transition: 500,
+                interval: 6000
+            });
+
+        });
+    </script>
+</body>
+
+</html>
