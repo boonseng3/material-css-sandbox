@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Preloaders</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Preloaders</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- DETERMINATE PROGRES -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">DETERMINATE PROGRES</div>
+                    <div class="progress">
+                        <div class="determinate" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- INDETERMINATE PROGRESS -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">INDETERMINATE PROGRESS</div>
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- SMALL RED -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">SMALL RED</div>
+                    <div class="preloader-wrapper small active">
+                        <div class="spinner-layer spinner-red-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- STANDARD BLUE -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">STANDARD BLUE</div>
+                    <div class="preloader-wrapper active">
+                        <div class="spinner-layer spinner-blue-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- BIG YELLOW  -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">BIG YELLOW</div>
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-yellow-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- FLASHING COLORS  -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">FLASHING COLORS</div>
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.chips-input').material_chip({
+                placeholder: 'Enter a tag',
+                secondaryPlaceholder: '+tag',
+                autocompleteOptions: {
+                    data: {
+                        'html': null,
+                        'css': null,
+                        'javascript': null
+                    },
+
+                }
+            });
+            // add chip event
+            $('.chips-input').on('chip.add', function (e, chip) {
+                console.log(`You added a chip -${chip.tag}`);
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>

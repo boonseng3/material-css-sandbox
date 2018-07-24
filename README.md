@@ -27,3 +27,4 @@ This will showcase all the different components in material.
 10. Forms
 11. Tables & Media
 12. Chips & Pagination
+13. Preloaders
