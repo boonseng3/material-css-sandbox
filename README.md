@@ -24,3 +24,5 @@ This will showcase all the different components in material.
 7.  Grid Layout
 8.  Cards
 9.  Breadcrumbs & Footer
+10. Forms
+11. Tables & Media
