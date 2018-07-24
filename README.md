@@ -20,5 +20,5 @@ This will showcase all the different components in material.
     - FAB toolbar
 
 5.  Navbar
-
 6.  Collections & Badges
+7.  Grid Layout
