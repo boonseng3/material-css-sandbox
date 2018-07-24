@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chips & Pagination</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Chips & Pagination</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- CHIPS -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">CHIPS</div>
+                    <div class="chip">
+                        Web development
+                    </div>
+                    <div class="chip">
+                        Web design
+                    </div>
+                    <div class="chip">
+                        Programming
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- CHIPS WITH CLOSE -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">CHIPS WITH CLOSE</div>
+                    <div class="chip">
+                        Web development
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip">
+                        Web design
+                        <i class="close material-icons">close</i>
+                    </div>
+                    <div class="chip">
+                        Programming
+                        <i class="close material-icons">close</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- CHIPS WITH IMAGES -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">CHIPS WITH IMAGES</div>
+                    <div class="chip">
+                        <img src="img/img1.jpg"> John Doe
+                    </div>
+                    <div class="chip">
+                        <img src="img/img2.jpg"> Brian Jackson
+                    </div>
+                    <div class="chip">
+                        <img src="img/img3.jpg"> Lori Smith
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- CHIPS INPUT WITH AUTOCOMPLETE -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">CHIPS INPUT WITH AUTOCOMPLETE</div>
+                    <div class="chips-input"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- PAGINATION -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">PAGINATION</div>
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#!">
+                                <i class="material-icons">chevron_left</i>
+                            </a>
+                        </li>
+                        <li class="waves-effect">
+                            <a href="#!">1</a>
+                        </li>
+                        <li class="waves-effect active">
+                            <a href="#!">2</a>
+                        </li>
+                        <li class="waves-effect">
+                            <a href="#!">3</a>
+                        </li>
+                        <li class="waves-effect">
+                            <a href="#!">4</a>
+                        </li>
+                        <li class="waves-effect">
+                            <a href="#!">5</a>
+                        </li>
+                        <li class="waves-effect">
+                            <a href="#!">
+                                <i class="material-icons">chevron_right</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.chips-input').material_chip({
+                placeholder: 'Enter a tag',
+                secondaryPlaceholder: '+tag',
+                autocompleteOptions: {
+                    data: {
+                        'html': null,
+                        'css': null,
+                        'javascript': null
+                    },
+
+                }
+            });
+            // add chip event
+            $('.chips-input').on('chip.add', function (e, chip) {
+                console.log(`You added a chip -${chip.tag}`);
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>
