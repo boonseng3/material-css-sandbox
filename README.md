@@ -28,3 +28,4 @@ This will showcase all the different components in material.
 11. Tables & Media
 12. Chips & Pagination
 13. Preloaders
+14. Carousel & Content Slider
