@@ -13,7 +13,10 @@ This will showcase all the different components in material.
 3.  Buttons & Icons
 
 4.  Floating & Fixed Action Buttons
+
     - floating buttons, pulse effect, simple fixed action button
     - Fixed action button with items
     - Fixed action button with items, horizontal, click to toggle
     - FAB toolbar
+
+5.  Navbar

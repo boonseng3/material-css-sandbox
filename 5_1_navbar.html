@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Navbar</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">Navbar</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- STANDARD MENU -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">STANDARD MENU</div>
+                    <nav>
+                        <div class="container">
+                            <a href="#" class="brand-logo center">Logo</a>
+                            <ul id="nav-mobile" class="right hide-on-small-and-down">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- RESPONSIVE WITH SIDE MENU -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">RESPONSIVE WITH SIDE MENU</div>
+                    <nav class="blue darken-4">
+                        <div class="container">
+                            <!-- Hamburger icon-->
+                            <a href="#" class="brand-logo center">Logo</a>
+                            <a class="button-collapse" data-activates="mobile-nav" href="#">
+                                <i class="material-icons">menu</i>
+                            </a>
+
+                            <!--Right menu items-->
+                            <ul id="nav-mobile" class="right hide-on-small-and-down">
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+
+                                <!-- DROPDOWN TRIGGER -->
+                                <li>
+                                    <a class="dropdown-button" data-activates="my-dropdown" href="#!">Dropdown
+                                        <i class="material-icons right">arrow_drop_down</i>
+                                    </a>
+                                </li>
+
+                                <!-- BUTTON LINK -->
+                                <li>
+                                    <a class="btn waves-effect waves-light">Login</a>
+                                </li>
+
+                                <!-- ICON LINK -->
+                                <li>
+                                    <a href="#">
+                                        <i class="material-icons">person</i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- Side navigation bar-->
+                            <ul class="side-nav" id="mobile-nav">
+                                <li>
+                                    <a href="#">Nav 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nav 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nav 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- DROPDOWN MENU ITEMS can be placed outside the container div-->
+        <ul id="my-dropdown" class="dropdown-content">
+            <li>
+                <a href="#">Link 1</a>
+            </li>
+            <li>
+                <a href="#">Link 2</a>
+            </li>
+            <li>
+                <a href="#">Link 3</a>
+            </li>
+        </ul>
+
+        <div class="col s12">
+            <!-- FIXED NAVBAR -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">FIXED NAVBAR</div>
+                    <nav class="black">
+                        <div class="nav-wrapper">
+                            <div class="container">
+                                <a href="#" class="brand-logo center">Logo</a>
+                                <ul id="nav-mobile" class="right hide-on-small-and-down">
+                                    <li>
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- SEARCH BAR -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">SEARCH BAR</div>
+                    <nav class="green">
+                        <div class="nav-wrapper">
+                            <form>
+                                <div class="input-field">
+                                    <input type="search" id="search" required>
+                                    <label for="search" class="label-icon">
+                                        <i class="material-icons">search</i>
+                                    </label>
+                                    <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
+            });
+
+            // JAVASCRIPT START HERE //
+            $('.button-collapse').sideNav();
+
+
+
+        });
+    </script>
+</body>
+
+</html>
