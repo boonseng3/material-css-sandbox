@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>SideNav</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12">
+            <h1 class="center-align">SideNav</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <!-- SIDENAV -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">SIDENAV</div>
+                    <ul id="slide-out" class="side-nav">
+                        <li>
+                            <div class="user-view">
+                                <div class="background">
+                                    <img src="img/img4.jpg">
+                                </div>
+                                <a href="#!">
+                                    <img class="circle" src="img/img5.jpg">
+                                </a>
+                                <a href="#!">
+                                    <span class="white-text name">John Doe</span>
+                                </a>
+                                <a>
+                                    <span class="white-text email">jdoe@gmail.com</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <i class="material-icons">dashboard</i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#!">Posts</a>
+                        </li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a href="#!" class="subheader">Account Info</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="waves-effect">Logout</a>
+                        </li>
+                    </ul>
+                    <a href="#!" data-activates="slide-out" class="button-collapse">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 500px;"></div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav({
+                menuWidth: 300,
+                edge: 'left',
+                closeOnClick: false,
+                draggable: true,
+                onOpen: function () {
+                    console.log('Nav open');
+                },
+                onClose: function () {
+                    console.log('Nav closed');
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
