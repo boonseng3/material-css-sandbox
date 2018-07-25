@@ -4,7 +4,7 @@ Adapted from [Materialize CSS From Scratch With 5 Projects](https://www.safaribo
 
 Stripped down all the unnecessary stuff and wrap the examples in card where possible.
 
-This will showcase all the different components in material.
+This will showcase all the different components in material. Uses Materialize v0.100.2.
 
 1.  Basic Typography
 
