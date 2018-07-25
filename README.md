@@ -53,3 +53,4 @@ This will showcase all the different components in material.
 19. Modals
 20. Parallax (Works only in Firefox)
 21. SideNav
+22. Pushpin

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Push pin</title>
+    <style>
+        html,
+        body,
+        .block {
+            height: 100%
+        }
+
+        .pin-top {
+            position: relative;
+        }
+
+        /* Class for when element is below threshold */
+
+        .pin-bottom {
+            position: relative;
+        }
+
+        /* Class for when element is pinned */
+
+        .pinned {
+            position: fixed !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blue" class="block blue">
+        <nav class="pushpin-demo-nav" data-target="blue">
+            <div class="nav-wrapper light-blue">
+                <div class="container">
+                    <a href="#" class="brand-logo">Blue</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Blue Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blue Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blue Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="red" class="block red lighten-1">
+        <nav class="pushpin-demo-nav" data-target="red">
+            <div class="nav-wrapper red">
+                <div class="container">
+                    <a href="#" class="brand-logo">Red</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Red Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Red Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Red Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="green" class="block green">
+        <nav class="pushpin-demo-nav" data-target="green">
+            <div class="nav-wrapper green">
+                <div class="container">
+                    <a href="#" class="brand-logo">Green</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Green Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Green Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Green Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.pushpin-demo-nav').each(function () {
+                var $this = $(this);
+                var $target = $('#' + $(this).attr('data-target'));
+                $this.pushpin({
+                    top: $target.offset().top,
+                    bottom: $target.offset().top + $target.outerHeight() - $this.height()
+                });
+            });
+            $('.target').pushpin({
+                top: 0,
+                bottom: 1000,
+                offset: 0
+            });
+
+        });
+    </script>
+</body>
+
+</html>
