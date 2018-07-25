@@ -14,23 +14,41 @@ This will showcase all the different components in material.
 
 4.  Floating & Fixed Action Buttons
 
-    - floating buttons, pulse effect, simple fixed action button
-    - Fixed action button with items
-    - Fixed action button with items, horizontal, click to toggle
-    - FAB toolbar
+- floating buttons, pulse effect, simple fixed action button
+
+- Fixed action button with items
+
+- Fixed action button with items, horizontal, click to toggle
+
+- FAB toolbar
 
 5.  Navbar
+
 6.  Collections & Badges
+
 7.  Grid Layout
+
 8.  Cards
+
 9.  Breadcrumbs & Footer
+
 10. Forms
+
 11. Tables & Media
+
 12. Chips & Pagination
+
 13. Preloaders
+
 14. Carousel & Content Slider
+
 15. Collapsible
+
 16. Feature Discovery
+
 17. Toasts & Tooltips
+
 18. Materialbox & Slider
+
 19. Modals
+20. Parallax (Works only in Firefox)
