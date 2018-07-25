@@ -55,3 +55,4 @@ This will showcase all the different components in material.
 21. SideNav
 22. Pushpin
 23. Scrollspy
+24. Tabs
